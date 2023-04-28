@@ -1,2 +1,16 @@
 <!DOCTYPE html>
-<script src="test.js"></script>
+<html>
+	<head>
+		<script src="test.js"></script>
+		<script>
+			function copyToClipboard(elementId) {
+				const element = document.getElementById(elementId);
+				navigator.clipboard.writeText(element.innerText);
+			}
+		</script>
+	</head>
+	<body>
+		<p id="some-text">Some text</p>
+		<button onclick="copyToClipboard('some-text')">Copy!</button>
+	</body>
+</html>
